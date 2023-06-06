@@ -18,7 +18,7 @@ import com.group.todoappweek8.viewmodel.ListTodoViewModel
 
 class TodoListFragment : Fragment() {
     private lateinit var viewModel:ListTodoViewModel
-    private val todoListAdapter  = TodoListAdapter(arrayListOf(), { item -> viewModel.clearTask(item) })
+    private val todoListAdapter  = TodoListAdapter(arrayListOf(), { item -> viewModel.updateDone(item) })
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
