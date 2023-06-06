@@ -15,9 +15,8 @@ interface TodoDao {
 
     @Query("UPDATE todo SET is_done=1 WHERE uuid=:id")
     fun updateTodo(id:Int)
-    // Kenapa menggunakan INTEGER daripada BOOLEAN dikarenakan INTEGER lebih mudah digunakan
-    // dan status dengan menggukana bool memiliki konsep yang sama dengan INTEGER 1 dan 0
-    // sehingga memiliki kesamaan antara bool dan integer
+    // Kenapa menggunakan INTEGER daripada BOOLEAN dikarenakan SQLlite hanya memiliki INTEGER
+    // tidak memiliki tipe BOOLEAN
 
     @Delete
     fun deleteTodo(todo:Todo)
